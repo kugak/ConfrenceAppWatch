@@ -23,6 +23,8 @@
 		307CAC161FE9822500596728 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CAC151FE9822500596728 /* ProgramViewController.swift */; };
 		307CAC181FE9824900596728 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CAC171FE9824900596728 /* ProgramTableViewCell.swift */; };
 		307CAC1A1FE9826B00596728 /* ProgramObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CAC191FE9826B00596728 /* ProgramObject.swift */; };
+		307CAC1C1FE9958F00596728 /* ProgRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CAC1B1FE9958F00596728 /* ProgRowController.swift */; };
+		307CAC1E1FE995A800596728 /* ProgramInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CAC1D1FE995A800596728 /* ProgramInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		307CAC151FE9822500596728 /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		307CAC171FE9824900596728 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		307CAC191FE9826B00596728 /* ProgramObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramObject.swift; sourceTree = "<group>"; };
+		307CAC1B1FE9958F00596728 /* ProgRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgRowController.swift; sourceTree = "<group>"; };
+		307CAC1D1FE995A800596728 /* ProgramInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				307CABF91FE9755100596728 /* InterfaceController.swift */,
+				307CAC1D1FE995A800596728 /* ProgramInterfaceController.swift */,
 			);
 			path = "Interface Controller";
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			children = (
 				307CABFB1FE9755100596728 /* ExtensionDelegate.swift */,
 				307CABFD1FE9755100596728 /* NotificationController.swift */,
+				307CAC1B1FE9958F00596728 /* ProgRowController.swift */,
 			);
 			path = "Special Classes";
 			sourceTree = "<group>";
@@ -357,6 +363,8 @@
 			files = (
 				307CABFE1FE9755100596728 /* NotificationController.swift in Sources */,
 				307CABFC1FE9755100596728 /* ExtensionDelegate.swift in Sources */,
+				307CAC1C1FE9958F00596728 /* ProgRowController.swift in Sources */,
+				307CAC1E1FE995A800596728 /* ProgramInterfaceController.swift in Sources */,
 				307CABFA1FE9755100596728 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
