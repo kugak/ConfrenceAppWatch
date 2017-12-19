@@ -116,9 +116,19 @@
                                                     <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <state key="normal" title="Save"/>
+                                                    <connections>
+                                                        <action selector="saveUnSaveSelectionWithSender:" destination="CDR-Y8-pzQ" eventType="touchUpInside" id="VF9-vC-fsb"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="from" destination="hRX-Ze-XUm" id="R0I-cB-anK"/>
+                                            <outlet property="imgSpeaker" destination="yiK-hd-Qml" id="w6y-bN-1ww"/>
+                                            <outlet property="speaker" destination="ndQ-LG-cPU" id="e1X-S5-EJ4"/>
+                                            <outlet property="title" destination="ckO-gn-ntV" id="3G3-oB-S0Z"/>
+                                            <outlet property="to" destination="GFm-fW-idE" id="y7K-3D-bvd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
