@@ -20,6 +20,9 @@
 		307CABFC1FE9755100596728 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CABFB1FE9755100596728 /* ExtensionDelegate.swift */; };
 		307CABFE1FE9755100596728 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CABFD1FE9755100596728 /* NotificationController.swift */; };
 		307CAC001FE9755100596728 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307CABFF1FE9755100596728 /* Assets.xcassets */; };
+		307CAC161FE9822500596728 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CAC151FE9822500596728 /* ProgramViewController.swift */; };
+		307CAC181FE9824900596728 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CAC171FE9824900596728 /* ProgramTableViewCell.swift */; };
+		307CAC1A1FE9826B00596728 /* ProgramObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CAC191FE9826B00596728 /* ProgramObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		307CABFF1FE9755100596728 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		307CAC011FE9755100596728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		307CAC021FE9755100596728 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		307CAC151FE9822500596728 /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
+		307CAC171FE9824900596728 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
+		307CAC191FE9826B00596728 /* ProgramObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,11 +132,10 @@
 		307CABD51FE9755100596728 /* ConfrenceAppWatch */ = {
 			isa = PBXGroup;
 			children = (
-				307CABD61FE9755100596728 /* AppDelegate.swift */,
-				307CABD81FE9755100596728 /* ViewController.swift */,
-				307CABDA1FE9755100596728 /* Main.storyboard */,
+				307CAC121FE97FD800596728 /* Storyboards */,
+				307CAC111FE97FD100596728 /* View Controllers */,
+				307CAC101FE97FC500596728 /* Special Classes */,
 				307CABDD1FE9755100596728 /* Assets.xcassets */,
-				307CABDF1FE9755100596728 /* LaunchScreen.storyboard */,
 				307CABE21FE9755100596728 /* Info.plist */,
 			);
 			path = ConfrenceAppWatch;
@@ -149,14 +154,58 @@
 		307CABF81FE9755100596728 /* ConfrenceAppWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				307CABF91FE9755100596728 /* InterfaceController.swift */,
-				307CABFB1FE9755100596728 /* ExtensionDelegate.swift */,
-				307CABFD1FE9755100596728 /* NotificationController.swift */,
+				307CAC141FE9802700596728 /* Special Classes */,
+				307CAC131FE9801E00596728 /* Interface Controller */,
 				307CABFF1FE9755100596728 /* Assets.xcassets */,
 				307CAC011FE9755100596728 /* Info.plist */,
 				307CAC021FE9755100596728 /* PushNotificationPayload.apns */,
 			);
 			path = "ConfrenceAppWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		307CAC101FE97FC500596728 /* Special Classes */ = {
+			isa = PBXGroup;
+			children = (
+				307CABD61FE9755100596728 /* AppDelegate.swift */,
+				307CAC171FE9824900596728 /* ProgramTableViewCell.swift */,
+				307CAC191FE9826B00596728 /* ProgramObject.swift */,
+			);
+			path = "Special Classes";
+			sourceTree = "<group>";
+		};
+		307CAC111FE97FD100596728 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				307CABD81FE9755100596728 /* ViewController.swift */,
+				307CAC151FE9822500596728 /* ProgramViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		307CAC121FE97FD800596728 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				307CABDA1FE9755100596728 /* Main.storyboard */,
+				307CABDF1FE9755100596728 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		307CAC131FE9801E00596728 /* Interface Controller */ = {
+			isa = PBXGroup;
+			children = (
+				307CABF91FE9755100596728 /* InterfaceController.swift */,
+			);
+			path = "Interface Controller";
+			sourceTree = "<group>";
+		};
+		307CAC141FE9802700596728 /* Special Classes */ = {
+			isa = PBXGroup;
+			children = (
+				307CABFB1FE9755100596728 /* ExtensionDelegate.swift */,
+				307CABFD1FE9755100596728 /* NotificationController.swift */,
+			);
+			path = "Special Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,8 +343,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				307CAC181FE9824900596728 /* ProgramTableViewCell.swift in Sources */,
 				307CABD91FE9755100596728 /* ViewController.swift in Sources */,
 				307CABD71FE9755100596728 /* AppDelegate.swift in Sources */,
+				307CAC1A1FE9826B00596728 /* ProgramObject.swift in Sources */,
+				307CAC161FE9822500596728 /* ProgramViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
