@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProgramViewController: UIViewController {
+class ProgramViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var programs : [ProgramObject] = []
     
@@ -66,6 +66,34 @@ class ProgramViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //table
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return programs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let tableCell :
+            ProgramTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProgramCell") as? ProgramTableViewCell ?? ProgramTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "ProgramCell")
+        
+        var row = indexPath.row
+        var rowObj = programs[row]
+        
+        //populate cell
+        tableCell.title.text = rowObj.title as String?
+        tableCell.speaker.text = rowObj.speaker as String?
+        tableCell.from.text = rowObj.from as String?
+        tableCell.to    .text = rowObj.to as String?
+        
+        return tableCell
+
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+
     
 
     /*
