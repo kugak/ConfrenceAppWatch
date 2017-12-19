@@ -60,6 +60,7 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        initFakeDetails()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,13 +70,20 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return programs.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0;
+    }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let tableCell :
-            ProgramTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProgramCell") as? ProgramTableViewCell ?? ProgramTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "ProgramCell")
+        let tableCell : ProgramTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ProgramCell")
+        as? ProgramTableViewCell ?? ProgramTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "ProgramCell")
+        
         
         var row = indexPath.row
         var rowObj = programs[row]
@@ -86,12 +94,14 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         tableCell.from.text = rowObj.from as String?
         tableCell.to    .text = rowObj.to as String?
         
+        
+        
         return tableCell
 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        
     }
 
     
