@@ -30,13 +30,25 @@ class ProgramObject: NSObject, NSCoding {
         self.details = details
     }
     
-    //contructor for serializing and de-serializing object (NSCoding)
+    //de-serializing object (NSCoding)
     required convenience init? (coder decoder: NSCoder)
     {
-        <#code#>
+        guard
+            let title = decoder.decodeObject (forKey: "title") as? String,
+            let speaker = decoder.decodeObject (forKey: "speaker") as? String,
+            let from = decoder.decodeObject (forKey: "from") as? String,
+            let to = decoder.decodeObject (forKey: "to") as? String,
+            let details = decoder.decodeObject(forKey: "details") as? String
+       else
+        {
+                return nil
+        }
+        
+        self.init()
+        self.initWithData(title: title, speaker: speaker, from: from, to: to, details: details)
     }
     
-    //take object and send it to watch
+    //for serializing
     func encode(with coder: NSCoder)
     {
         coder.encode(self.title, forKey: "title")
